@@ -1,0 +1,10 @@
+---
+- name: Test custom module
+  hosts: localhost
+  tasks:
+    - name: Create a file with custom module
+      my_module:
+        path: /tmp/my_test_file.txt
+        content: "Hello, Ansible!"
+        state: present
+
